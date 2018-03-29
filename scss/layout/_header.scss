@@ -1,11 +1,14 @@
 .header {
-	@include debug;
-
-	position: relative;
+	// @include debug;
 	height: 10rem;
 	border-bottom: 1px solid #f2f2f2;
+	background-color: #fff;
 	font-size: 1.1rem;
 	font-weight: bold;
+
+	.row {
+		position: relative;
+	}
 
 	&__tit {
 		font-weight: bold;
@@ -16,7 +19,7 @@
 
 	&__tel {
 		position: absolute;
-		left: 13rem;
+		left: 1rem;
 		top: 50%;
 		transform: translateY(-50%);
 
@@ -70,5 +73,91 @@
 			display: inline-block;
 			margin-top: .3rem;
 		} // txt
+	}
+}
+
+nav {
+	position: relative;
+	height: 6.9rem;
+	background-color: #fff;
+	font-weight: bold;
+}
+.gnb {
+	// @include debug;
+
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+
+	&__link {
+		// @include debug;
+		display: block;
+		line-height: 6.9rem;
+		letter-spacing: .2rem;
+
+		.ico--sel {
+			margin-top: 3.3rem;
+			margin-left: 1rem;
+		}
+	}
+}
+
+.snb {
+	display: none;
+	height: 44rem;
+	background-color: #fff;
+
+	&.is-show {
+		display: block;
+	}
+
+	.row {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__col {
+		// @include debug;
+
+		float: left;
+		padding-top: 3rem;
+		width: 22rem;
+		margin-right: 1rem;
+		font-weight: bold;
+
+		&:nth-child(3) {
+			margin-right: 0;
+		}
+
+		&:last-child {
+			padding-top: 0;
+			margin-right: 0;
+			width: 24rem;
+		}
+	} // col
+
+	&__category {
+		margin-bottom: 2rem;
+		text-transform: uppercase;
+
+		&--single {
+			margin-bottom: 1.8rem;
+		}
+	}
+
+	&__item-list {
+		font-size: 1.2rem;
+		opacity: .5;
+
+		li:last-child a {
+			margin-bottom: 4rem;
+		}
+
+		a {
+			display: block;
+			margin-bottom: 1.5rem;
+		}
 	}
 }
