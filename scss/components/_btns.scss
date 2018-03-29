@@ -67,11 +67,40 @@ $line-height: 4.3rem;
 	&--round {
 		border-radius: 3rem;
 	}
+}
 
+.icon-wrap {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: .5rem;
 
+	&::after {
+		@include background-image('../images/icons/divider.png');
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: .8rem;
+		height: 1.6rem;
+		content: '';
+	}
+}
 
+.icon-btn {
+	float: left;
+	padding: 0;
+	width: 4.3rem;
+	height: 4.3rem;
+	border: 0;
+	cursor: pointer;
+	outline: none;
 
+	&:first-child {
+		background-color: #cc5b4d;
+	}
 
-
-
+	&:last-child {
+		background-color: #e67567;
+	}
 }
