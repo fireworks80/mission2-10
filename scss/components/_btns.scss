@@ -1,0 +1,75 @@
+$color--normal: #e36556 !default;
+$color--hover: #ed8373 !default;
+$color--pressed: #d94c3f !default;
+$color--disabled: #f4e7e5 !default;
+
+$color--disabled-font: #d1c7c7 !default;
+
+$line-height: 4.3rem;
+
+.btn {
+	padding: 0;
+	height: $line-height;
+	width: 17rem;
+	border: 0;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	line-height: $line-height;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: $color--hover;
+	}
+
+	&:active {
+		background-color: $color--pressed;
+	}
+
+	&:disabled {
+		color: $color--disabled-font;
+		cursor: initial;
+	}
+
+
+	&--full {
+		background-color: $color--normal;
+		color: #fff;
+
+		&:disabled {
+			background-color: $color--disabled;
+		}
+	}
+
+	&--empty {
+		background-color: #fff;
+		border: .2rem solid $color--normal;
+		color: $color--normal;
+
+		&:hover {
+			color: #fff;
+		}
+
+		&:disabled {
+			color: $color--disabled-font;
+			background-color: #fff;
+			border-color: $color--disabled;
+		}
+	}
+
+	&--square {
+		border-radius: .3rem;
+	}
+
+	&--round {
+		border-radius: 3rem;
+	}
+
+
+
+
+
+
+
+}
