@@ -143,23 +143,40 @@
 					<button class="pager__item" type="button">4번 배너</button>
 				</div>
 			</section>
-			<section>
-				<h2>제품 카테고리</h2>
-				<a href=""><img src="" alt="shoes sale"></a>
-				<a href=""><img src="" alt="leather bags"></a>
-				<span>
-					<img src="" alt="women save 50%">
-					<a href="">shop now</a>
-				</span>
-				<span>
-					<img src="" alt="collection fall 2016">
-					<a href="">more</a>
-				</span>
+			<section class="prd">
+				<h2 class="a11y-hidden">제품 카테고리</h2>
+				<ul class="row clearfix">
+					<li class="prd-item">
+						<a class="prd-banner prd-banner--shoes" href="">
+							<b class="prd-banner__tit">shoes</b>
+							<em class="prd-banner__disc">sale</em>
+						</a>
+					</li>
+					<li class="prd-item">
+						<a class="prd-banner prd-banner--bags" href="">
+							<b class="prd-banner__tit">leather<br>bags</b>
+						</a>
+					</li>
+					<li class="prd-item">
+						<a class="prd-banner prd-banner--women" href="">
+							<b class="prd-banner__tit">women</b>
+							<em class="prd-banner__disc">save 50%</em>
+							<span class="btn btn--full btn--square">shop now</span>
+						</a>
+					</li>
+					<li class="prd-item">
+						<a class="prd-banner prd-banner--collection" href="">
+							<b class="prd-banner__tit">collection</b>
+							<em class="prd-banner__disc">fall 2016</em>
+							<span class="btn btn--full btn--square">more</span>
+						</a>
+					</li>
+				</ul>
 			</section>
 			<section>
-				<h2>주요 제품보기</h2>
-				<ul>
-					<li><a href="">featured products</a></li>
+				<h2 class="a11y-hidden">주요 제품보기</h2>
+				<ul class="main-nav clearfix">
+					<li><a class="is-active" href="">featured products</a></li>
 					<li><a href="">new arrivals</a></li>
 					<li><a href="">best sellers</a></li>
 				</ul>

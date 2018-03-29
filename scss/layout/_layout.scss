@@ -25,9 +25,8 @@ body {
 }
 
 .row {
-	// @include debug;
+	@include debug;
 	width: $width-min;
-	padding: 0 1rem;
 	margin-left: auto;
 	margin-right: auto;
 }

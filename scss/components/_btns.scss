@@ -8,6 +8,7 @@ $color--disabled-font: #d1c7c7 !default;
 $line-height: 4.3rem;
 
 .btn {
+	display: inline-block;
 	padding: 0;
 	height: $line-height;
 	width: 17rem;
@@ -18,6 +19,7 @@ $line-height: 4.3rem;
 	line-height: $line-height;
 	letter-spacing: .2rem;
 	text-transform: uppercase;
+	text-align: center;
 
 	&:hover {
 		background-color: $color--hover;

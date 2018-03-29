@@ -1,3 +1,5 @@
+$loc: '../images/';
+
 .banner-section {
 	// @include debug;
 	position: relative;
@@ -24,7 +26,7 @@
 
 	&__item {
 		// @include debug;
-		@include background-image('../images/icons/pager-ir.png',$x: left);
+		@include background-image($loc + 'icons/pager-ir.png',$x: left);
 
 		padding: 0;
 		margin-left: 1.9rem;
@@ -40,6 +42,129 @@
 
 		&.is-active {
 			background-position: right top;
+		}
+	}
+}
+
+.prd {
+	margin-bottom: 2rem;
+
+	&-item {
+		float: left;
+		height: 30rem;
+
+		&:nth-child(1),
+		&:nth-child(2) {
+			margin-right: 2rem;
+			margin-bottom: 2rem;
+		}
+	} // item
+
+	&-banner {
+		display: block;
+		border-radius: .5rem;
+
+		&--shoes,
+		&--bags {
+			width: 30rem;
+			height: 30rem;
+		}
+
+		&--women {
+			width: 30rem;
+			height: 62rem;
+		}
+
+		&--collection {
+			width: 62rem;
+			height: 30rem;
+		}
+
+		&--shoes {
+			@include background-image($loc + 'banner/shoes.jpg');
+
+			padding-top: 20.7rem;
+			text-align: center;
+		}
+
+		&--bags {
+			@include background-image($loc + 'banner/leather-bags.jpg');
+
+			padding-top: 5rem;
+			padding-left: 3.3rem;
+		}
+
+		&--women {
+			@include background-image($loc + 'banner/woman.jpg');
+
+			padding-top: 24.8rem;
+			text-align: center;
+
+			.prd-banner__disc {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&--collection {
+			@include background-image($loc + 'banner/collection.jpg');
+
+			padding-top: 9.6rem;
+			padding-left: 36rem;
+			text-align: center;
+
+			.prd-banner__disc {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&__tit,
+		&__disc {
+			display: block;
+		}
+
+		&__tit {
+			margin-bottom: .3rem;
+			font-weight: 800;
+			font-size: 3rem;
+			text-transform: uppercase;
+		}
+
+		&__disc {
+			font-family: 'PT Serif', serif;
+			font-size: 1.5rem;
+			color: #5b5d69;
+		}
+	}
+}
+
+.main-nav {
+	display: flex;
+	justify-content: center;
+	height: 3.9rem;
+	background-color: #fff;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 800;
+
+	li:nth-child(2) {
+		margin: 0 7rem;
+	}
+
+	a {
+		position: relative;
+		display: block;
+		line-height: 3.9rem;
+
+		&:hover::before,
+		&.is-active::before {
+			@include background-image($loc + 'icons/marker.png');
+			position: absolute;
+			top: -.2rem;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 1rem;
+			height: .5rem;
+			content: '';
 		}
 	}
 }
