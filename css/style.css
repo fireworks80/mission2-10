@@ -347,10 +347,17 @@ body {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
 ul,
 ol {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
   list-style: none;
 }
 
@@ -362,7 +369,12 @@ select {
   vertical-align: top;
 }
 
-.h-a11y-hidden {
+a {
+  text-decoration: none;
+  color: #3c3d48;
+}
+
+.a11y-hidden {
   position: absolute;
   top: auto;
   left: -9999em;
@@ -370,6 +382,12 @@ select {
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: '';
 }
 
 .btn {
@@ -419,10 +437,6 @@ select {
 }
 .btn--round {
   border-radius: 3rem;
-}
-
-.column {
-  padding: 1rem;
 }
 
 [type="text"],
@@ -622,6 +636,174 @@ select {
 }
 .tag--half--full {
   color: #fff;
+}
+
+.ico {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center top;
+  text-indent: -9999em;
+}
+.ico--americanEx {
+  width: 5.2rem;
+  height: 1.6rem;
+  background-image: url("../images/icons/Icon-AmericanExpress.svg");
+}
+.ico--master {
+  width: 3.9rem;
+  height: 2.3rem;
+  background-image: url("../images/icons/Icon-MasterCard.svg");
+}
+.ico--paypal {
+  width: 3.6rem;
+  height: 1rem;
+  background-image: url("../images/icons/Icon-PayPal.svg");
+}
+.ico--visa {
+  width: 3.9rem;
+  height: 1.3rem;
+  background-image: url("../images/icons/Icon-Visa.svg");
+}
+.ico--behance {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url("../images/icons/Icon-Behance.svg");
+}
+.ico--dribbble {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url("../images/icons/Icon-Dribbble.svg");
+}
+.ico--facebook {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url("../images/icons/Icon-Facebook.svg");
+}
+.ico--instagram {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url("../images/icons/Icon-Instagram.svg");
+}
+.ico--twitter {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url("../images/icons/Icon-Twitter.svg");
+}
+.ico--cart {
+  width: 1.5rem;
+  height: 2rem;
+  background-image: url("../images/icons/Icon-cart.svg");
+}
+.ico--clock {
+  width: 1.7rem;
+  height: 1.7rem;
+  background-image: url("../images/icons/Icon-clock.svg");
+}
+.ico--comments {
+  width: 1.6rem;
+  height: 1.7rem;
+  background-image: url("../images/icons/Icon-comments.svg");
+}
+.ico--face {
+  width: 1.2rem;
+  height: 1.6rem;
+  background-image: url("../images/icons/Icon-face.svg");
+}
+.ico--headset {
+  width: 1.6rem;
+  height: 1.7rem;
+  background-image: url("../images/icons/Icon-headset.svg");
+}
+.ico--lock {
+  width: 1.2rem;
+  height: 1.6rem;
+  background-image: url("../images/icons/Icon-lock.svg");
+}
+.ico--wishlist {
+  width: 1.7rem;
+  height: 1.8rem;
+  background-image: url("../images/icons/Icon-wishlist.svg");
+}
+.ico--sel {
+  width: 0.7rem;
+  height: 0.4rem;
+  background-image: url("../images/icons/Icon-select.svg");
+}
+
+.column {
+  padding: 1rem;
+}
+.column--dark {
+  background-color: #eee;
+}
+
+.wrap {
+  outline: 1px dashed red;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+.header {
+  outline: 1px dashed red;
+  position: relative;
+  height: 10rem;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.header__tit {
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: center;
+  line-height: 10rem;
+}
+.header__tel {
+  position: absolute;
+  left: 13rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__tel .ico {
+  margin-top: -.3rem;
+  margin-right: 1rem;
+}
+.header__nav {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.header__nav__item {
+  float: left;
+}
+.header__nav__item:nth-child(1) {
+  margin-right: 2rem;
+}
+.header__nav__item:nth-child(3) {
+  margin: 0 3rem;
+}
+.header__nav__item:nth-child(4) .ico--face {
+  margin-right: 1rem;
+}
+.header__nav__item:nth-child(4) .header__nav__txt {
+  opacity: .5;
+}
+.header__nav__item button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.header__nav__item button .ico--sel {
+  margin-top: .7rem;
+  margin-left: .7rem;
+}
+.header__nav__txt {
+  display: inline-block;
+  margin-top: .3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

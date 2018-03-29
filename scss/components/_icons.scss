@@ -1,5 +1,108 @@
+$loc: '../images/icons/' !default;
+
+@mixin size($w, $h: $w) {
+	width: $w;
+	height: $h;
+}
+
+@mixin bg-image($img) {
+	background-image: url($loc + $img);
+}
+
 .ico {
-	@include background-image(../images/icons/icon-ir.png);
-	width: 2.6rem;
-	height: 2.6rem;
+	display: inline-block;
+	background: {
+		repeat: no-repeat;
+		position: center top;
+	}
+	text-indent: -9999em;
+
+	// paymant
+	&--americanEx {
+		@include size(5.2rem, 1.6rem);
+		@include bg-image('Icon-AmericanExpress.svg');
+	}
+
+	&--master {
+		@include size(3.9rem, 2.3rem);
+		@include bg-image('Icon-MasterCard.svg');
+	}
+
+	&--paypal {
+		@include size(3.6rem, 1rem);
+		@include bg-image('Icon-PayPal.svg');
+	}
+
+	&--visa {
+		@include size(3.9rem, 1.3rem);
+		@include bg-image('Icon-Visa.svg');
+	}
+
+	// sns
+	&--behance {
+		@include size(2.6rem);
+		@include bg-image('Icon-Behance.svg');
+	}
+
+	&--dribbble {
+		@include size(2.6rem);
+		@include bg-image('Icon-Dribbble.svg');
+	}
+
+	&--facebook {
+		@include size(2.6rem);
+		@include bg-image('Icon-Facebook.svg');
+	}
+
+	&--instagram {
+		@include size(2.6rem);
+		@include bg-image('Icon-Instagram.svg');
+	}
+
+	&--twitter {
+		@include size(2.6rem);
+		@include bg-image('Icon-Twitter.svg');
+	}
+
+	// ico
+	&--cart {
+		@include size(1.5rem, 2rem);
+		@include bg-image('Icon-cart.svg');
+	}
+
+	&--clock {
+		@include size(1.7rem);
+		@include bg-image('Icon-clock.svg');
+	}
+
+	&--comments {
+		@include size(1.6rem, 1.7rem);
+		@include bg-image('Icon-comments.svg');
+	}
+
+	&--face {
+		@include size(1.2rem, 1.6rem);
+		@include bg-image('Icon-face.svg');
+	}
+
+	&--headset {
+		@include size(1.6rem, 1.7rem);
+		@include bg-image('Icon-headset.svg');
+	}
+
+	&--lock {
+		@include size(1.2rem, 1.6rem);
+		@include bg-image('Icon-lock.svg');
+	}
+
+	&--wishlist {
+		@include size(1.7rem, 1.8rem);
+		@include bg-image('Icon-wishlist.svg');
+	}
+
+	&--sel {
+		@include size(.7rem, .4rem);
+		@include bg-image('Icon-select.svg');
+	}
+
 }

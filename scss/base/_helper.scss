@@ -1,4 +1,4 @@
-.h-a11y-hidden {
+.a11y-hidden {
 	position: absolute;
 	top: auto;
 	left: -9999em;
@@ -6,4 +6,10 @@
 	width: 1px;
 	height: 1px;
 	clip: rect(0 0 0 0);
+}
+
+.clearfix::after {
+	display: table;
+	clear: both;
+	content: '';
 }
