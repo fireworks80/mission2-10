@@ -890,4 +890,42 @@ nav {
   margin-bottom: 1.5rem;
 }
 
+.banner-section {
+  position: relative;
+  overflow: hidden;
+  height: 581px;
+}
+.banner-section .banner-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+}
+.banner-section .banner-slider li {
+  float: left;
+}
+
+.pager {
+  position: absolute;
+  bottom: 2.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pager__item {
+  background: url("../images/icons/pager-ir.png") no-repeat left top;
+  padding: 0;
+  margin-left: 1.9rem;
+  width: 11px;
+  height: 11px;
+  border: 0;
+  cursor: pointer;
+  text-indent: -9999em;
+}
+.pager__item:first-child {
+  margin-left: 0;
+}
+.pager__item.is-active {
+  background-position: right top;
+}
+
 /*# sourceMappingURL=style.css.map */

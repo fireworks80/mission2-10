@@ -1,0 +1,45 @@
+.banner-section {
+	// @include debug;
+	position: relative;
+	overflow: hidden;
+	height: 581px;
+
+	.banner-slider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 500%;
+
+		li {
+			float: left;
+		}
+	}
+}
+
+.pager {
+	position: absolute;
+	bottom: 2.6rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&__item {
+		// @include debug;
+		@include background-image('../images/icons/pager-ir.png',$x: left);
+
+		padding: 0;
+		margin-left: 1.9rem;
+		width: 11px;
+		height: 11px;
+		border: 0;
+		cursor: pointer;
+		text-indent: -9999em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&.is-active {
+			background-position: right top;
+		}
+	}
+}
