@@ -9,7 +9,9 @@ h2,
 h3,
 ul,
 ol,
-figure {
+figure,
+fieldset,
+p {
 	margin: 0;
 	padding: 0;
 }
@@ -24,11 +26,16 @@ label,
 input,
 button,
 select,
-img {
+img,
+small {
 	vertical-align: top;
 }
 
 a {
 	text-decoration: none;
 	color: #3c3d48;
+}
+
+fieldset {
+	border: 0;
 }

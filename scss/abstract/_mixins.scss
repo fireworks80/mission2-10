@@ -1,5 +1,5 @@
 @mixin background-image($name, $repeat: no-repeat, $x: center, $y: top, $color: null) {
-	background: url($name) $repeat $x $y;
+	background: $color url($name) $repeat $x $y;
 }
 
 @mixin debug($type: dashed, $color: red) {

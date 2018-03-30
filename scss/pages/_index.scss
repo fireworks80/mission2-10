@@ -285,11 +285,83 @@ $loc: '../images/';
 
 	&__wrap {
 		display: flex;
+		justify-content: space-between;
 
 		article {
-			@include debug;
+			// @include debug;
 			width: 30rem;
 			height: 30rem;
-		}
+			padding: 3rem 3rem 1.7rem;
+			border-radius: .5rem;
+			text-align: left;
+			line-height: 1.4;
+
+			&:nth-child(1) {
+				background-color: #fff;
+
+				.blog-ico {
+					color: #5b5d69;
+				}
+			}
+
+			&:nth-child(2) {
+				@include background-image($loc + 'blog/life.jpg');
+
+				color: #fff;
+
+				.tag {
+					margin-bottom: 2.2rem;
+				}
+
+				.blog-ico {
+					color: inherit;
+				}
+			}
+
+			&:nth-child(3) {
+				@include background-image($loc + 'blog/travel.jpg', $color: #fff);
+				color: #fff;
+
+				.tag {
+					margin-bottom: 10.7rem;
+					color: inherit;
+				}
+
+				p {
+					font-weight: 800;
+					color: #3c3d48;
+
+					img {
+						margin-right: 1.1rem;
+					}
+
+					span {
+						display: inline-block;
+						margin-top: .8rem;
+					}
+				}
+
+
+			}
+
+			h3 {
+				font-size: 2rem;
+			}
+
+			p {
+				margin-bottom: 2.1rem;
+				font-size: 1.4rem;
+			}
+
+			.blog-ico {
+				// @include debug;
+				font-size: 1.1rem;
+
+				.ico {
+					margin-top: -.3rem;
+					margin-right: .9rem;
+				}
+			}
+		} // article
 	}
 }
