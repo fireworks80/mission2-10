@@ -1,367 +1,334 @@
 $loc: '../images/';
+// ========================= 
+// header
+// ========================= 
+.header {
+    .l-row {
+        position: relative;
+    }
+    &__tel {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .ico {
+            margin-top: -.3rem;
+            margin-right: 1rem;
+        }
+    }
+    .logo {
+        text-align: center;
+    }
+    &__unb {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
 
 .banner-section {
-	// @include debug;
-	position: relative;
-	overflow: hidden;
-	height: 581px;
-
-	.banner-slider {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 500%;
-
-		li {
-			float: left;
-		}
-	}
+    // @include debug;
+    position: relative;
+    overflow: hidden;
+    height: 581px;
+    .banner-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500%;
+        li {
+            float: left;
+        }
+    }
 }
 
 .pager {
-	position: absolute;
-	bottom: 2.6rem;
-	left: 50%;
-	transform: translateX(-50%);
-
-	&__item {
-		// @include debug;
-		@include background-image($loc + 'icons/pager-ir.png',$x: left);
-
-		padding: 0;
-		margin-left: 1.9rem;
-		width: 11px;
-		height: 11px;
-		border: 0;
-		cursor: pointer;
-		text-indent: -9999em;
-
-		&:first-child {
-			margin-left: 0;
-		}
-
-		&.is-active {
-			background-position: right top;
-		}
-	}
+    position: absolute;
+    bottom: 2.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    &__item {
+        // @include debug;
+        @include background-image($loc + 'icons/pager-ir.png', $x: left);
+        padding: 0;
+        margin-left: 1.9rem;
+        width: 11px;
+        height: 11px;
+        border: 0;
+        cursor: pointer;
+        text-indent: -9999em;
+        &:first-child {
+            margin-left: 0;
+        }
+        &.is-active {
+            background-position: right top;
+        }
+    }
 }
 
 .prd {
-	margin-bottom: 2rem;
-
-	&-item {
-		float: left;
-		height: 30rem;
-
-		&:nth-child(1),
-		&:nth-child(2) {
-			margin-right: 2rem;
-			margin-bottom: 2rem;
-		}
-	} // item
-
-	&-banner {
-		display: block;
-		border-radius: .5rem;
-
-		&--shoes,
-		&--bags {
-			width: 30rem;
-			height: 30rem;
-		}
-
-		&--women {
-			width: 30rem;
-			height: 62rem;
-		}
-
-		&--collection {
-			width: 62rem;
-			height: 30rem;
-		}
-
-		&--shoes {
-			@include background-image($loc + 'banner/shoes.jpg');
-
-			padding-top: 20.7rem;
-			text-align: center;
-		}
-
-		&--bags {
-			@include background-image($loc + 'banner/leather-bags.jpg');
-
-			padding-top: 5rem;
-			padding-left: 3.3rem;
-		}
-
-		&--women {
-			@include background-image($loc + 'banner/woman.jpg');
-
-			padding-top: 24.8rem;
-			text-align: center;
-
-			.prd-banner__disc {
-				margin-bottom: 3rem;
-			}
-		}
-
-		&--collection {
-			@include background-image($loc + 'banner/collection.jpg');
-
-			padding-top: 9.6rem;
-			padding-left: 36rem;
-			text-align: center;
-
-			.prd-banner__disc {
-				margin-bottom: 3rem;
-			}
-		}
-
-		&__tit,
-		&__disc {
-			display: block;
-		}
-
-		&__tit {
-			margin-bottom: .3rem;
-			font-weight: 800;
-			font-size: 3rem;
-			text-transform: uppercase;
-		}
-
-		&__disc {
-			font-family: 'PT Serif', serif;
-			font-size: 1.5rem;
-			color: #5b5d69;
-		}
-	}
+    margin-bottom: 2rem;
+    &-item {
+        float: left;
+        height: 30rem;
+        &:nth-child(1),
+        &:nth-child(2) {
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+        }
+    } // item
+    &-banner {
+        display: block;
+        border-radius: .5rem;
+        &--shoes,
+        &--bags {
+            width: 30rem;
+            height: 30rem;
+        }
+        &--women {
+            width: 30rem;
+            height: 62rem;
+        }
+        &--collection {
+            width: 62rem;
+            height: 30rem;
+        }
+        &--shoes {
+            @include background-image($loc + 'banner/shoes.jpg');
+            padding-top: 20.7rem;
+            text-align: center;
+        }
+        &--bags {
+            @include background-image($loc + 'banner/leather-bags.jpg');
+            padding-top: 5rem;
+            padding-left: 3.3rem;
+        }
+        &--women {
+            @include background-image($loc + 'banner/woman.jpg');
+            padding-top: 24.8rem;
+            text-align: center;
+            .prd-banner__disc {
+                margin-bottom: 3rem;
+            }
+        }
+        &--collection {
+            @include background-image($loc + 'banner/collection.jpg');
+            padding-top: 9.6rem;
+            padding-left: 36rem;
+            text-align: center;
+            .prd-banner__disc {
+                margin-bottom: 3rem;
+            }
+        }
+        &__tit,
+        &__disc {
+            display: block;
+        }
+        &__tit {
+            margin-bottom: .3rem;
+            font-weight: 800;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        &__disc {
+            font-family: 'PT Serif', serif;
+            font-size: 1.5rem;
+            color: #5b5d69;
+        }
+    }
 }
 
 .main-nav {
-	display: flex;
-	justify-content: center;
-	height: 3.9rem;
-	margin-bottom: 2rem;
-	background-color: #fff;
-	text-transform: uppercase;
-	font-size: 1.4rem;
-	font-weight: 800;
-
-	li:nth-child(2) {
-		margin: 0 7rem;
-	}
-
-	a {
-		position: relative;
-		display: block;
-		line-height: 3.9rem;
-
-		&:hover::before,
-		&.is-active::before {
-			@include background-image($loc + 'icons/marker.png');
-			position: absolute;
-			top: -.2rem;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 1rem;
-			height: .5rem;
-			content: '';
-		}
-	}
+    display: flex;
+    justify-content: center;
+    height: 3.9rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 800;
+    li:nth-child(2) {
+        margin: 0 7rem;
+    }
+    a {
+        position: relative;
+        display: block;
+        line-height: 3.9rem;
+        &:hover::before,
+        &.is-active::before {
+            @include background-image($loc + 'icons/marker.png');
+            position: absolute;
+            top: -.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1rem;
+            height: .5rem;
+            content: '';
+        }
+    }
 }
 
 .card-list {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 2rem;
-
-	&__item {
-		position: relative;
-		display: block;
-		overflow: hidden;
-		width: 22rem;
-		border-radius: .5rem;
-		background-color: #fff;
-
-		&:hover::before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 10;
-			width: 100%;
-			height: 32rem;
-			background-color: rgba(255, 255, 255, .7);
-			content: '';
-		}
-
-		&:hover .icon-wrap {
-			display: block;
-		}
-	}
-
-	.tag {
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
-
-	.tag--sale {
-		padding-top: .7rem;
-		line-height: 1.5;
-	}
-
-	.icon-wrap {
-		position: absolute;
-		left: 50%;
-		top: 25.7rem;
-		transform: translateX(-50%);
-		z-index: 10;
-		display: none;
-	}
-
-	&__disc {
-		display: block;
-		padding-top: 2.6rem;
-		height: 91px;
-		border-top: 1px solid #ebebeb;
-		text-align: center;
-		text-transform: uppercase;
-
-		b {
-			display: block;
-			margin-bottom: 1.5rem;
-			font-size: 1.2rem;
-			color: #3c3d48;
-		}
-
-		em {
-			font-size: 1.4rem;
-			color: #e36556;
-			font-style: normal;
-			font-weight: 700;
-		}
-
-		s {
-			display: inline-block;
-			margin-left: .9rem;
-			opacity: .2;
-		}
-	} // disc
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    &__item {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 22rem;
+        border-radius: .5rem;
+        background-color: #fff;
+        &:hover::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 32rem;
+            background-color: rgba(255, 255, 255, .7);
+            content: '';
+        }
+        &:hover .icon-wrap {
+            display: block;
+        }
+    }
+    .tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .tag--sale {
+        padding-top: .7rem;
+        line-height: 1.5;
+    }
+    .icon-wrap {
+        position: absolute;
+        left: 50%;
+        top: 25.7rem;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: none;
+    }
+    &__disc {
+        display: block;
+        padding-top: 2.6rem;
+        height: 91px;
+        border-top: 1px solid #ebebeb;
+        text-align: center;
+        text-transform: uppercase;
+        b {
+            display: block;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: #3c3d48;
+        }
+        em {
+            font-size: 1.4rem;
+            color: #e36556;
+            font-style: normal;
+            font-weight: 700;
+        }
+        s {
+            display: inline-block;
+            margin-left: .9rem;
+            opacity: .2;
+        }
+    } // disc
 }
 
 .about-us {
-	margin-bottom: 4rem;
-	padding: 4rem 6rem 3.9rem;
-	background-color: #fff;
-	text-align: center;
-
-	h2 {
-		font-size: 4rem;
-		font-weight: 800;
-		color: #3c3d48;
-		text-transform: uppercase;
-	}
-
-	p {
-		font-family: 'PT Serif', serif;
-		font-size: 15px;
-		line-height: 1.5;
-		text-align: left;
-		color: #5b5d69;
-	}
+    margin-bottom: 4rem;
+    padding: 4rem 6rem 3.9rem;
+    background-color: #fff;
+    text-align: center;
+    h2 {
+        font-size: 4rem;
+        font-weight: 800;
+        color: #3c3d48;
+        text-transform: uppercase;
+    }
+    p {
+        font-family: 'PT Serif', serif;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+        color: #5b5d69;
+    }
 }
 
 .from-blog {
-	margin-bottom: 2rem;
-	text-align: center;
-
-	h2 {
-		margin-bottom: 3.6rem;
-		font-size: 4rem;
-		font-weight: 800;
-		color: #3c3d48;
-		text-transform: uppercase;
-	}
-
-	&__wrap {
-		display: flex;
-		justify-content: space-between;
-
-		article {
-			// @include debug;
-			width: 30rem;
-			height: 30rem;
-			padding: 3rem 3rem 1.7rem;
-			border-radius: .5rem;
-			text-align: left;
-			line-height: 1.4;
-
-			&:nth-child(1) {
-				background-color: #fff;
-
-				.blog-ico {
-					color: #5b5d69;
-				}
-			}
-
-			&:nth-child(2) {
-				@include background-image($loc + 'blog/life.jpg');
-
-				color: #fff;
-
-				.tag {
-					margin-bottom: 2.2rem;
-				}
-
-				.blog-ico {
-					color: inherit;
-				}
-			}
-
-			&:nth-child(3) {
-				@include background-image($loc + 'blog/travel.jpg', $color: #fff);
-				color: #fff;
-
-				.tag {
-					margin-bottom: 10.7rem;
-					color: inherit;
-				}
-
-				p {
-					font-weight: 800;
-					color: #3c3d48;
-
-					img {
-						margin-right: 1.1rem;
-					}
-
-					span {
-						display: inline-block;
-						margin-top: .8rem;
-					}
-				}
-
-
-			}
-
-			h3 {
-				font-size: 2rem;
-			}
-
-			p {
-				margin-bottom: 2.1rem;
-				font-size: 1.4rem;
-			}
-
-			.blog-ico {
-				// @include debug;
-				font-size: 1.1rem;
-
-				.ico {
-					margin-top: -.3rem;
-					margin-right: .9rem;
-				}
-			}
-		} // article
-	}
+    margin-bottom: 2rem;
+    text-align: center;
+    h2 {
+        margin-bottom: 3.6rem;
+        font-size: 4rem;
+        font-weight: 800;
+        color: #3c3d48;
+        text-transform: uppercase;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        article {
+            // @include debug;
+            width: 30rem;
+            height: 30rem;
+            padding: 3rem 3rem 1.7rem;
+            border-radius: .5rem;
+            text-align: left;
+            line-height: 1.4;
+            &:nth-child(1) {
+                background-color: #fff;
+                .blog-ico {
+                    color: #5b5d69;
+                }
+            }
+            &:nth-child(2) {
+                @include background-image($loc + 'blog/life.jpg');
+                color: #fff;
+                .tag {
+                    margin-bottom: 2.2rem;
+                }
+                .blog-ico {
+                    color: inherit;
+                }
+            }
+            &:nth-child(3) {
+                @include background-image($loc + 'blog/travel.jpg', $color: #fff);
+                color: #fff;
+                .tag {
+                    margin-bottom: 10.7rem;
+                    color: inherit;
+                }
+                p {
+                    font-weight: 800;
+                    color: #3c3d48;
+                    img {
+                        margin-right: 1.1rem;
+                    }
+                    span {
+                        display: inline-block;
+                        margin-top: .8rem;
+                    }
+                }
+            }
+            h3 {
+                font-size: 2rem;
+            }
+            p {
+                margin-bottom: 2.1rem;
+                font-size: 1.4rem;
+            }
+            .blog-ico {
+                // @include debug;
+                font-size: 1.1rem;
+                .ico {
+                    margin-top: -.3rem;
+                    margin-right: .9rem;
+                }
+            }
+        } // article
+    }
 }

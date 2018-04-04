@@ -1,23 +1,18 @@
 @charset 'utf-8';
-
-
 // =================================
 // vender
 // =================================
 @import 'vender/normalize';
-
 // =================================
 // abstract
 // =================================
 @import 'abstract/mixins';
-
 // =================================
 // base
 // =================================
 @import 'base/font';
 @import 'base/reset';
 @import 'base/helper';
-
 // =================================
 // components
 // =================================
@@ -25,15 +20,13 @@
 @import 'components/forms';
 @import 'components/tag';
 @import 'components/icons';
-
-
+@import 'components/nav';
 // =================================
 // layout
 // =================================
 @import 'layout/layout';
 @import 'layout/header';
 @import 'layout/footer';
-
 // =================================
 // pages
 // =================================

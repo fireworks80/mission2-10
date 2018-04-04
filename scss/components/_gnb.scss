@@ -1,0 +1,16 @@
+.gnb {
+    // @include debug;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    &__link {
+        // @include debug;
+        display: block;
+        line-height: 6.9rem;
+        letter-spacing: .2rem;
+        .ico--sel {
+            margin-top: 3.3rem;
+            margin-left: 1rem;
+        }
+    }
+}

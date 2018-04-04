@@ -1,33 +1,36 @@
 $width-max: 1200px;
 $width-min: 940px;
-
 body {
-	background-color: #e5e5e5;
+    background-color: #e5e5e5;
 }
 
 .ui-column {
-	padding: 1rem;
-
-	&--dark {
-		background-color: #eee;
-	}
+    padding: 1rem;
+    &--dark {
+        background-color: #eee;
+    }
 }
-
 
 .wrap {
-	@include debug;
-
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 35.3rem;
-	width: $width-max;
+    @include debug;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35.3rem;
+    width: $width-max;
 }
 
-.row {
-	@include debug;
-	width: $width-min;
-	margin-left: auto;
-	margin-right: auto;
+.l-row {
+    @include debug;
+    width: $width-min;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.l-left {
+    float: left;
+}
 
+.l-flex {
+    display: flex;
+    justify-content: space-between;
+}

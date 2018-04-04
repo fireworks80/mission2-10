@@ -1,0 +1,45 @@
+.unb {
+		// position: absolute;
+		// top: 50%;
+		// right: 1rem;
+		// transform: translateY(-50%);
+
+		&__item {
+			float: left;
+
+			&:nth-child(1) {
+				margin-right: 2rem;
+			}
+
+			&:nth-child(3) {
+				margin: 0 3rem;
+			}
+
+			&:nth-child(4) .ico--face {
+				margin-right: 1rem;
+			}
+
+			&:nth-child(4) .header__nav__txt {
+				opacity: .5;
+			}
+
+			button {
+				padding: 0;
+				border: 0;
+				background-color: transparent;
+				cursor: pointer;
+				text-transform: uppercase;
+				font-weight: bold;
+
+				.ico--sel {
+					margin-top: .7rem;
+					margin-left: .7rem;
+				}
+			}
+		} // item
+
+		&__txt {
+			display: inline-block;
+			margin-top: .3rem;
+		} // txt
+	}
