@@ -389,10 +389,11 @@ $loc: '../images/';
             // @include debug;
             width: 30rem;
             height: 30rem;
-            padding: 3rem 3rem 1.7rem;
+            padding: 3rem 3rem 0;
             border-radius: .5rem;
             text-align: left;
             line-height: 1.4;
+
             &:nth-child(1) {
                 background-color: #fff;
                 .blog-ico {
@@ -413,12 +414,14 @@ $loc: '../images/';
                 @include background-image($loc + 'blog/travel.jpg', $color: #fff);
                 color: #fff;
                 .tag {
-                    margin-bottom: 10.7rem;
+                    margin-bottom: 9rem;
                     color: inherit;
                 }
+
                 p {
                     font-weight: 800;
                     color: #3c3d48;
+                    text-transform: uppercase;
                     img {
                         margin-right: 1.1rem;
                     }
@@ -429,6 +432,7 @@ $loc: '../images/';
                 }
             }
             h3 {
+                margin-bottom: 3rem;
                 font-size: 2rem;
             }
             p {
