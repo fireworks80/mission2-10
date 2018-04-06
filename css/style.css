@@ -457,40 +457,6 @@ fieldset {
 /*******************************
 	favorit
 ********************************/
-.favorit {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  border-radius: .5rem;
-}
-.favorit::after {
-  background: url("../images/icons/divider.png") no-repeat center top;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: .8rem;
-  height: 1.6rem;
-  content: '';
-}
-.favorit__basket, .favorit__heart {
-  float: left;
-  width: 4.3rem;
-  height: 4.3rem;
-}
-.favorit__basket {
-  background-color: #cc5b4d;
-}
-.favorit__basket .ico {
-  margin-top: 1rem;
-}
-.favorit__heart {
-  background-color: #e67567;
-}
-.favorit__heart .ico {
-  margin-top: 1.2rem;
-}
-
 [type="text"],
 [type="password"] {
   padding-left: 1rem;
@@ -1129,6 +1095,7 @@ body {
 }
 
 .card-list {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -1151,8 +1118,8 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   content: '';
 }
-.card-list__item:hover .icon-wrap {
-  display: block;
+.card-list__item:hover .favorit {
+  display: inline-block;
 }
 .card-list .tag {
   position: absolute;
@@ -1162,14 +1129,6 @@ body {
 .card-list .tag--sale {
   padding-top: .7rem;
   line-height: 1.5;
-}
-.card-list .icon-wrap {
-  position: absolute;
-  left: 50%;
-  top: 25.7rem;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: none;
 }
 .card-list__disc {
   display: block;
@@ -1195,6 +1154,44 @@ body {
   display: inline-block;
   margin-left: .9rem;
   opacity: .2;
+}
+
+.favorit {
+  position: absolute;
+  left: 50%;
+  bottom: 11rem;
+  transform: translateX(-50%);
+  z-index: 10;
+  overflow: hidden;
+  display: none;
+  border-radius: .5rem;
+}
+.favorit::after {
+  background: url("../images/icons/divider.png") no-repeat center top;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: .8rem;
+  height: 1.6rem;
+  content: '';
+}
+.favorit__basket, .favorit__heart {
+  float: left;
+  width: 4.3rem;
+  height: 4.3rem;
+}
+.favorit__basket {
+  background-color: #cc5b4d;
+}
+.favorit__basket .ico {
+  margin-top: 1rem;
+}
+.favorit__heart {
+  background-color: #e67567;
+}
+.favorit__heart .ico {
+  margin-top: 1.2rem;
 }
 
 .about-us {

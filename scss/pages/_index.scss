@@ -247,6 +247,7 @@ $loc: '../images/';
 }
 
 .card-list {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
@@ -267,8 +268,8 @@ $loc: '../images/';
             background-color: rgba(255, 255, 255, .7);
             content: '';
         }
-        &:hover .icon-wrap {
-            display: block;
+        &:hover .favorit {
+            display: inline-block;
         }
     }
     .tag {
@@ -280,14 +281,7 @@ $loc: '../images/';
         padding-top: .7rem;
         line-height: 1.5;
     }
-    .icon-wrap {
-        position: absolute;
-        left: 50%;
-        top: 25.7rem;
-        transform: translateX(-50%);
-        z-index: 10;
-        display: none;
-    }
+
     &__disc {
         display: block;
         padding-top: 2.6rem;
@@ -313,6 +307,46 @@ $loc: '../images/';
             opacity: .2;
         }
     } // disc
+}
+
+.favorit {
+    position: absolute;
+    left: 50%;
+    bottom: 11rem;
+    transform: translateX(-50%);
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+    border-radius: .5rem;
+
+    &::after {
+        @include background-image('../images/icons/divider.png');
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: .8rem;
+        height: 1.6rem;
+        content: '';
+    }
+    &__basket,
+    &__heart {
+        float: left;
+        width: 4.3rem;
+        height: 4.3rem;
+    } // btn
+    &__basket {
+        background-color: #cc5b4d;
+        .ico {
+            margin-top: 1rem;
+        }
+    }
+    &__heart {
+        background-color: #e67567;
+        .ico {
+            margin-top: 1.2rem;
+        }
+    }
 }
 
 .about-us {

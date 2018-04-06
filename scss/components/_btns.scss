@@ -65,37 +65,3 @@ $line-height: 4.3rem;
 	favorit
 ********************************/
 
-.favorit {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    border-radius: .5rem;
-    &::after {
-        @include background-image('../images/icons/divider.png');
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: .8rem;
-        height: 1.6rem;
-        content: '';
-    }
-    &__basket,
-    &__heart {
-        float: left;
-        width: 4.3rem;
-        height: 4.3rem;
-    } // btn
-    &__basket {
-        background-color: #cc5b4d;
-        .ico {
-            margin-top: 1rem;
-        }
-    }
-    &__heart {
-        background-color: #e67567;
-        .ico {
-            margin-top: 1.2rem;
-        }
-    }
-}
