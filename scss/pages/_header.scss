@@ -1,0 +1,57 @@
+.tel {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .ico {
+        margin-top: -.3rem;
+        margin-right: 1rem;
+    }
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 10rem;
+}
+
+.unb {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+
+    &__item:nth-child(1) {
+        margin-right: 2rem;
+    }
+    &__item:nth-child(3) {
+            margin: 0 3rem;
+    }
+
+    &__item:nth-child(4) .ico--face {
+        margin-right: 1rem;
+    }
+
+    &__item:nth-child(4) .header__nav__txt {
+        opacity: .5;
+    }
+
+    button {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .ico--sel {
+        margin-top: .7rem;
+        margin-left: .7rem;
+    }
+
+    &__txt {
+        display: inline-block;
+        margin-top: .3rem;
+    } // txt
+}
