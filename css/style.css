@@ -1099,7 +1099,7 @@ body {
   color: #5b5d69;
 }
 
-.main-nav {
+.tab {
   display: flex;
   justify-content: center;
   height: 3.9rem;
@@ -1109,15 +1109,15 @@ body {
   font-size: 1.4rem;
   font-weight: 800;
 }
-.main-nav li:nth-child(2) {
+.tab li:nth-child(2) {
   margin: 0 7rem;
 }
-.main-nav a {
+.tab a {
   position: relative;
   display: block;
   line-height: 3.9rem;
 }
-.main-nav a:hover::before, .main-nav a.is-active::before {
+.tab a:hover::before, .tab a.is-active::before {
   background: url("../images/icons/marker.png") no-repeat center top;
   position: absolute;
   top: -.2rem;

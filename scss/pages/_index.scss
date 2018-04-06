@@ -215,7 +215,7 @@ $loc: '../images/';
     }
 }
 
-.main-nav {
+.tab {
     display: flex;
     justify-content: center;
     height: 3.9rem;
@@ -224,6 +224,7 @@ $loc: '../images/';
     text-transform: uppercase;
     font-size: 1.4rem;
     font-weight: 800;
+
     li:nth-child(2) {
         margin: 0 7rem;
     }
