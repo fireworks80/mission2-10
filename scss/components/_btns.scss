@@ -22,6 +22,7 @@ $line-height: 4.3rem;
     letter-spacing: .2rem;
     text-transform: uppercase;
     text-align: center;
+
     // status
     &:hover {
         background-color: $color--hover;
@@ -33,6 +34,7 @@ $line-height: 4.3rem;
         color: $color--disabled-font;
         cursor: initial;
     }
+
     // sub classing
     &--full {
         background-color: $color--normal;
@@ -40,7 +42,8 @@ $line-height: 4.3rem;
         &:disabled {
             background-color: $color--disabled;
         }
-    }
+    } // full
+
     &--empty {
         background-color: #fff;
         border: .2rem solid $color--normal;
@@ -53,7 +56,7 @@ $line-height: 4.3rem;
             background-color: #fff;
             border-color: $color--disabled;
         }
-    }
+    } // empty
 
     &--round {
         border-radius: 3rem;
