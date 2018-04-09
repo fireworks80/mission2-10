@@ -10,8 +10,8 @@ $color--disabled-ico: #d1c7c7 !default;
 $color--disabled-font: #5b5d69 !default;
 
 
-// input [type="text"],[type="password"]
-// ================================
+// [type="text"],[type="password"]
+// ======================================
 [type="text"],
 [type="password"] {
 	padding-left: 1rem;
@@ -99,49 +99,33 @@ $color--disabled-font: #5b5d69 !default;
 }
 
 
-// check
+// [type="checkbox"][type="radio"]
 // ================================
-.check,
-.radio {
-	display: inline-block;
-	user-select: none;
-	color: $color--default-font;
+[type="checkbox"],
+[type="radio"] {
+	overflow: hidden;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
 
-	[type="checkbox"] {
-		overflow: hidden;
-		margin: -1px;
-		width: 1px;
-		height: 1px;
-		clip: rect(0 0 0 0);
+	&:checked + label::before {
+		border-color: $color--hover;
+	} // checked
 
-		&:checked + label::before {
-			border-color: $color--hover;
-			background-color: $color--hover;
-		}
+	&:disabled + label {
+		color: $color--disabled-font;
 
-		&:checked + label::after {
-			position: absolute;
-			left: .2rem;
-			top: .2rem;
-			color: #fff;
-			content: '✓'
-		}
-
-		&:disabled + label {
-			color: $color--disabled-font;
-		}
-
-		&:disabled + label::before {
-			background-color: $color--disabled;
+		&::before {
 			border-color: $color--disabled;
 		}
 
-		&:disabled + label::after {
-			color: $color--disabled-ico;
+		&::after {
+			background-color: $color--disabled-ico;
 		}
-	} // checkbox
+	} // disabled
 
-	label {
+	& + label {
 		position: relative;
 		font-size: 1.3rem;
 		font-weight: bold;
@@ -155,28 +139,39 @@ $color--disabled-font: #5b5d69 !default;
 			border-radius: .2rem;
 			content: '';
 		}
+	} // label
+}
+
+// [type="checkbox"]
+// ================================
+[type="checkbox"] {
+	&:checked + label {
+		&::before {
+			background-color: $color--hover;
+		}
+		&::after {
+			position: absolute;
+			left: .2rem;
+			top: .2rem;
+			color: #fff;
+			content: '✓';
+		}
+	} // checked
+
+	&:disabled + label::before {
+		background-color: $color--disabled;
 	}
 }
 
-// radio
+
+// [type="radio"]
 // ================================
-.radio {
-	display: inline-block;
-	user-select: none;
-
-	[type="radio"] {
-		overflow: hidden;
-		margin: -.1rem;
-		width: .1rem;
-		height: .1rem;
-		clip: rect(0 0 0 0);
-
-		&:checked + label::before {
-			border-color: $color--hover;
+[type="radio"] {
+	&:checked + label {
+		&::before {
 			background-color: #fff;
 		}
-
-		&:checked + label::after {
+		&::after {
 			position: absolute;
 			top: .6rem;
 			left: .4rem;
@@ -185,23 +180,26 @@ $color--disabled-font: #5b5d69 !default;
 			background-color: $color--hover;
 			content: '';
 		}
+	} // checked
 
-		&:disabled + label {
-			color: $color--disabled-font;
-		}
-
-		&:disabled + label::before {
-			border-color: $color--disabled;
-		}
-
-		&:disabled + label::after {
-			background-color: $color--disabled-ico;
-		}
+	&:disabled + label::before {
+		border-color: $color--disabled;
 	}
+}
 
-	label::before,
-	label::after {
+// check wrap, radio wrap common
+// ================================
+.check,
+.radio {
+	display: inline-block;
+	user-select: none;
+	color: $color--default-font;
+}
+
+.radio label {
+	&::before,
+	&::after {
 		border-radius: 50%;
 	}
-
 }
+

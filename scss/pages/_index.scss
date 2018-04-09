@@ -5,7 +5,7 @@ $loc: '../images/';
 // =========================
 // header
 // =========================
-@import 'header';
+
 
 .grid {
     @include background-image($loc + 'grid.png');
@@ -469,9 +469,6 @@ $loc: '../images/';
 // footer
 // =========================
 .footer {
-    padding-top: 5rem;
-    background-color: #fff;
-
     &__category-col:nth-child(1) {
         width: 16rem;
     }
