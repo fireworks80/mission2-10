@@ -14,6 +14,7 @@ $line-height: 4.3rem;
     height: $line-height;
     width: 17rem;
     border: 0;
+    border-radius: .3rem;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -53,9 +54,7 @@ $line-height: 4.3rem;
             border-color: $color--disabled;
         }
     }
-    &--square {
-        border-radius: .3rem;
-    }
+
     &--round {
         border-radius: 3rem;
     }

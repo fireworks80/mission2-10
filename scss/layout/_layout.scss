@@ -6,7 +6,7 @@ $width-min: 940px;
 // global
 // =========================
 .l-row {
-    @include debug;
+    // @include debug;
     width: $width-min;
     margin-left: auto;
     margin-right: auto;
@@ -22,7 +22,7 @@ $width-min: 940px;
 // body
 // =========================
 body {
-    @include debug;
+    // @include debug;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 35.3rem;
@@ -51,7 +51,6 @@ body {
 // footer
 // =========================
 .footer {
-    padding-top: 5rem;
-    background-color: #fff;
+
 }
 

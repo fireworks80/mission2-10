@@ -105,5 +105,10 @@ $loc: '../images/icons/' !default;
 		@include bg-image('Icon-select.svg');
 	}
 
+	&--arrow {
+		@include size(.4rem, .7rem);
+		@include bg-image('Icon-Arrow.png');
+	}
+
 }
 

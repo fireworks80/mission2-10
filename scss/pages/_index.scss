@@ -1,5 +1,7 @@
 $loc: '../images/';
 
+
+
 // =========================
 // header
 // =========================
@@ -10,14 +12,63 @@ $loc: '../images/';
     position: fixed;
     top: 0;
     left: 2.5rem;
+    z-index: 20;
     width: 100%;
     height: 100%;
 }
+
+// =========================
+// common
+// =========================
+.category-tit {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.category__list {
+    font-size: 1.2rem;
+    color: #5b5d69;
+    text-transform: initial;
+
+    &--men li {
+        margin-bottom: 0;
+    }
+
+    &--women {
+        margin-bottom: 3rem;
+    }
+
+    &--acc {
+        margin-bottom: 4rem;
+    }
+
+    li {
+        margin-bottom: 1.7rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        display: block;
+        font-size: inherit;
+    }
+} // list
+
+
 
 .gnb {
     position: relative;
     background-color: #fff;
     text-transform: uppercase;
+
+    &:hover .snb {
+        display: block;
+    }
+
     &__link {
         // @include debug;
         display: block;
@@ -36,13 +87,11 @@ $loc: '../images/';
     position: absolute;
     top: 100%;
     left: 50%;
+    z-index: 10;
     transform: translateX(-50%);
     display: none;
+    width: 100%;
     background-color: #fff;
-
-    &.is-active {
-        display: flex;
-    }
 
     &__col {
         padding-top: 3rem;
@@ -61,44 +110,9 @@ $loc: '../images/';
         }
     } // col
 
-    &__tit {
-        margin-bottom: 1.8rem;
-        font-size: 1.1rem;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+    .category-tit:last-child {
+        margin-bottom: 0;
     } // tit
-
-    &__list {
-        font-size: 1.2rem;
-        color: #5b5d69;
-        text-transform: initial;
-
-        &--men li {
-            margin-bottom: 0;
-        }
-
-        &--women {
-            margin-bottom: 3rem;
-        }
-
-        &--acc {
-            margin-bottom: 4rem;
-        }
-
-        li {
-            margin-bottom: 1.7rem;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        a {
-            display: block;
-        }
-    } // list
 
     &__link-shoes {
         @include background-image($loc + 'banner/shoes-collection.jpg');
@@ -449,4 +463,103 @@ $loc: '../images/';
             }
         } // article
     }
+}
+
+// =========================
+// footer
+// =========================
+.footer {
+    padding-top: 5rem;
+    background-color: #fff;
+
+    &__category-col:nth-child(1) {
+        width: 16rem;
+    }
+    &__category-col:nth-child(2) {
+        width: 18rem;
+    }
+    &__category-col:nth-child(3) {
+        width: 19.1rem;
+    }
+
+    .category-tit--sns {
+        margin-bottom: 2.4rem;
+    }
+
+    .category__list {
+        margin-bottom: 5rem;
+    }
+}
+
+.sns {
+    margin-bottom: 4rem;
+
+    li {
+        float: left;
+        margin-right: 1rem;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.email {
+    position: relative;
+
+    .category-tit {
+        margin-bottom: 2.3rem;
+    }
+
+    [type="text"] {
+        padding-right: 4.3rem;
+    }
+
+    .btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 4.3rem;
+        height: 4.3rem;
+        border-radius: 0 .3rem .3rem 0;
+
+        .ico {
+            margin-top: 1.8rem;
+        }
+    }
+}
+
+.footer__bottom {
+    padding: 2rem 0 2.4rem;
+    border-top: 1px solid #f2f2f2;
+}
+
+.payment {
+    li {
+        float: left;
+
+        &:nth-child(1) {
+            margin-right: 28px;
+        }
+
+        &:nth-child(2) {
+            margin-right: 29px;
+            margin-top: .5rem;
+        }
+
+        &:nth-child(3) {
+            margin-right: 26px;
+            margin-top: .7rem;
+        }
+        &:nth-child(4) {
+            margin-top: .4rem;
+        }
+    }
+}
+
+.copyright {
+    margin-top: .7rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #5b5d69;
 }
