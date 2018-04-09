@@ -1137,12 +1137,14 @@ body {
 }
 .favorit__basket {
   background-color: #cc5b4d;
+  border-radius: .3rem 0 0 .3rem;
 }
 .favorit__basket .ico {
   margin-top: 1rem;
 }
 .favorit__heart {
   background-color: #e67567;
+  border-radius: 0 .3rem .3rem 0;
 }
 .favorit__heart .ico {
   margin-top: 1.2rem;
