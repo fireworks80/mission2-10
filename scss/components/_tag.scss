@@ -2,9 +2,8 @@ $color--disabled-font: #5b5d69 !default;
 
 .tag {
 	// @include debug;
+	@include size(4.3rem);
 	display: inline-block;
-	width: 4.3rem;
-	height: 4.3rem;
 	line-height: 4.3rem;
 	color: #fff;
 	text-transform: uppercase;

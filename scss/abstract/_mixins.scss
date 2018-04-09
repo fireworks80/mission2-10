@@ -2,6 +2,21 @@
 	background: $color url($name) $repeat $x $y;
 }
 
+// ============================================================
+// size
+// @param
+// 	$type: default - dashed (solid)
+// 	$color: default - red (color)
+// ============================================================
 @mixin debug($type: dashed, $color: red) {
 	outline: 1px $type $color;
+}
+
+// ============================================================
+// size
+// @param width, height(매개 변수가 하나 일경우 width값으로 초기화)
+// ============================================================
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
 }

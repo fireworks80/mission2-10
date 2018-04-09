@@ -1,9 +1,5 @@
 $loc: '../images/icons/' !default;
 
-@mixin size($w, $h: $w) {
-	width: $w;
-	height: $h;
-}
 
 @mixin bg-image($img) {
 	background-image: url($loc + $img);
